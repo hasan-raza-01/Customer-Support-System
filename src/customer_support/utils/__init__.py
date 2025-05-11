@@ -17,7 +17,7 @@ def create_dirs(path:str)->None:
         raise CustomException(e, sys)
     
 
-def read_yaml(path:str)->ConfigBox:
+def load_yaml(path:str)->ConfigBox:
     """reads the yaml file available in path
 
     Args:
@@ -33,7 +33,7 @@ def read_yaml(path:str)->ConfigBox:
         raise CustomException(e, sys)
     
 
-def save_yaml(content:any, file_path:str)->None:
+def dump_yaml(content:any, file_path:str)->None:
     """saves the yaml file with provided content
 
     Args:
@@ -46,7 +46,7 @@ def save_yaml(content:any, file_path:str)->None:
     except Exception as e:
         raise CustomException(e, sys)
     
-def save_json(data:dict, path:str)->None:
+def dump_json(data:dict, path:str)->None:
     """saves the dictoanary into json file
 
     Args:
@@ -63,7 +63,7 @@ def save_json(data:dict, path:str)->None:
     except Exception as e:
         raise CustomException(e, sys)
     
-def read_json(path:str)->dict:
+def load_json(path:str)->dict:
     """reads the data present inside the file provided in \'path\' variable
 
     Args:

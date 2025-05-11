@@ -2,3 +2,17 @@ python-dotenv
 python-box
 ipykernel
 PyYAML
+pandas
+numpy
+matplotlib
+seaborn
+pymongo
+scikit-learn
+langchain
+langchain-core
+langchain-astradb
+langchain-community
+langchain-google-genai
+langchain-huggingface
+langchain-groq
+boto3==1.15.3

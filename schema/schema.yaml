@@ -1,0 +1,8 @@
+columns:
+  product_id: object
+  product_title: object
+  rating: int64
+  review: object
+  summary: object
+numerical_columns:
+- rating

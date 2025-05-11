@@ -1,0 +1,25 @@
+MODELS: 
+  EMBEDDING:
+    GOOGLE: "models/text-embedding-004"
+    HUGGINGFACE: "BAAI/bge-small-en"
+  REASONER:
+    GEMINI_FLASH: "gemini-2.5-flash-preview-04-17"
+    GEMINI_PRO: "gemini-2.5-pro-preview-05-06"
+    DEEPSEEK_R1: "deepseek-r1-distill-llama-70b"
+    LLAMA_SMALL: "llama3-8b-8192"
+    LLAMA_BIG: "llama3-70b-8192"
+
+DATA_INGESTION:
+  DATA_DIR_NAME: "data"
+  DATA_FILE_NAME: "data.csv"
+  MONGODB_DATABASE_NAME: "Customer-Support"
+  MONGODB_COLLECTION_NAME: "Flipkart-Product-Reviews"
+  ASTRADB_KEYSPACE_NAME: "default_keyspace"
+  ASTRADB_COLLECTION_NAME: "customer_support"
+  ASTRADB_K_VALUE: 5
+  S3_BUCKET: "adminprojects"
+  S3_OBJECT: "customer_support"
+
+QUERRIES:
+  ROOT_DIR: "querries"
+  FILE_NAME: "_.json"
