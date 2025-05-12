@@ -16,3 +16,6 @@ langchain-google-genai
 langchain-huggingface
 langchain-groq
 boto3==1.15.3
+fastapi
+uvicorn
+python-multipart
