@@ -8,6 +8,7 @@ logging.getLogger("langchain").setLevel(logging.WARNING)
 logging.getLogger("astrapy").setLevel(logging.WARNING)
 logging.getLogger("langchain_astradb").setLevel(logging.WARNING)
 logging.getLogger("langchain_astradb.vectorstores").setLevel(logging.WARNING)
+logging.getLogger("httpx").setLevel(logging.WARNING)
 
 filename_format = datetime.datetime.now().strftime("%d_%m_%Y__%H_%M_%S")
 filename = f"{filename_format}.log"

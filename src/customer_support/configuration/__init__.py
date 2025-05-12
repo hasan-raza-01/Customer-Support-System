@@ -1,5 +1,6 @@
 from customer_support.constants import (
-    DataIngestionConstants
+    DataIngestionConstants,
+    RetrievalConstants
 )
 from dataclasses import dataclass
 from pathlib import Path
@@ -23,5 +24,12 @@ class DataIngestionConfig:
     GROQ_API_KEY=DataIngestionConstants.GROQ_API_KEY
     GOOGLE_API_KEY=DataIngestionConstants.GOOGLE_API_KEY
     HF_TOKEN=DataIngestionConstants.HF_TOKEN
+
+
+@dataclass 
+class RetrievalConfig:
+    GEMINI_PRO_NAME=RetrievalConstants.GEMINI_PRO_NAME
+    DEEPSEEK_R1_NAME=RetrievalConstants.DEEPSEEK_R1_NAME
+    PROMPT_TEMPLATES=RetrievalConstants.PROMPT_TEMPLATES
 
 

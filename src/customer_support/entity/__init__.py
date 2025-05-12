@@ -21,3 +21,10 @@ class DataIngestion:
     HF_TOKEN:str
 
 
+@dataclass 
+class Retrieval:
+    GEMINI_PRO_NAME:str
+    DEEPSEEK_R1_NAME:str
+    PROMPT_TEMPLATES:dict
+
+

@@ -7,25 +7,20 @@ from dataclasses import dataclass
 
 
 @dataclass 
-class TrainingPipeline:
+class DataIngestionPipeline:
 
-    def run(self)->dict:
+    def run(self) -> None:
         """runs the full pipeline of training
 
         Returns:
             dict: output of all initialized objects as a single dict 
         """
-        logging.info("In TrainingPipeline")
+        logging.info("In DataIngestionPipeline")
 
         # data ingestion
         data_ingestion=DataIngestionComponents(DataIngestionConfig)
         data_ingestion.main()
-        retriever = data_ingestion.get_vector_store().as_retriever()
-
-
-        logging.info("Out TrainingPipeline")
-        return {
-            "retriever":retriever
-        }
+        
+        logging.info("Out DataIngestionPipeline")
     
 

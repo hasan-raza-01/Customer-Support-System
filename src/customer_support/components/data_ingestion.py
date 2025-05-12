@@ -190,6 +190,7 @@ class DataIngestionComponents:
         try:
             logging.info("In get_vector_store")
 
+            self.load_embedding_model()
             vstore = AstraDBVectorStore(
                 collection_name=self.__data_ingestion_config.ASTRADB_COLLECTION_NAME,
                 embedding=self.embeddings,
@@ -230,7 +231,6 @@ class DataIngestionComponents:
         schema=load_yaml("schema/schema.yaml")
         status=self.validate_data(self.data_frame, schema)
         if status:
-            self.load_embedding_model()
             self.insert_data()
         else:
             logging.info(f"collected data and provided schema given {{status:'\{status}'\}}, skipping the upcomming data ingestion.")
