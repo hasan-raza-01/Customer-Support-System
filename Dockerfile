@@ -3,7 +3,6 @@ RUN apt-get update && apt-get upgrade -y && apt-get install --no-install-recomme
 WORKDIR /app
 COPY . .
 RUN pip install --upgrade pip uv 
-# RUN uv pip install --system -e .
-RUN uv pip install -e .
+RUN uv pip install --system -e .
 EXPOSE 8000  
 CMD ["uv", "run", "app.py"]
