@@ -19,3 +19,4 @@ boto3==1.15.3
 fastapi
 uvicorn
 python-multipart
+Jinja2
