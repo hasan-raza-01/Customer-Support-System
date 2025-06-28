@@ -1,4 +1,4 @@
-# Customer Support System for Modern Buisnesses/Organizations
+# SupportBot: A RAG‑Powered Customer Support Chatbot
 
 A production-grade, end-to-end Retrieval-Augmented Generation (RAG) chatbot engineered for modern  buisnesses and organizations. By harnessing real customer reviews and cutting-edge generative AI, this system delivers accurate, empathetic support—24/7, at scale.
 
@@ -52,12 +52,10 @@ A production-grade, end-to-end Retrieval-Augmented Generation (RAG) chatbot engi
     ```
     uvicorn app:app --host 0.0.0.0 --port 8000
     ```
-
 2. Build and tag the Docker image:  
    ```
    docker build -t support-bot:latest .
    ```
-
    ```
    docker run -p 8000 support-bot:latest
    ```
