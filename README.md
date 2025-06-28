@@ -1,6 +1,6 @@
-# Customer Support System for E-Commerce Platform
+# Customer Support System for Modern Buisnesses/Organizations
 
-A production-grade, end-to-end Retrieval-Augmented Generation (RAG) chatbot engineered for modern e-commerce. By harnessing real customer reviews and cutting-edge generative AI, this system delivers accurate, empathetic support—24/7, at scale.
+A production-grade, end-to-end Retrieval-Augmented Generation (RAG) chatbot engineered for modern  buisnesses and organizations. By harnessing real customer reviews and cutting-edge generative AI, this system delivers accurate, empathetic support—24/7, at scale.
 
 ---
 
