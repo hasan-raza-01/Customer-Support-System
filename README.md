@@ -83,6 +83,7 @@ A production-grade, end-to-end Retrieval-Augmented Generation (RAG) chatbot engi
    ```
 
 6. **(Alternative) Docker**
+
   ***build***
    ```bash
    docker build -t support-bot:latest .
