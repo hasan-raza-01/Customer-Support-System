@@ -4,6 +4,11 @@ A production-grade, end-to-end Retrieval-Augmented Generation (RAG) chatbot engi
 
 ---
 
+## Here’s a preview of the app’s user interface:
+![UI Screenshot](./screenshots/ui-preview.png)
+
+---
+
 ## 🔧 Core Workflow
 
 1. **Review Extraction**  
@@ -50,7 +55,11 @@ A production-grade, end-to-end Retrieval-Augmented Generation (RAG) chatbot engi
 
 1. With full source code
     ```
-    uvicorn app:app --host 0.0.0.0 --port 8000
+    pip install --upgrade pip uv
+    uv venv 
+    .venv\scripts\activate
+    uv pip install -e .
+    uv run app.py
     ```
 2. Build and tag the Docker image:  
    ```
