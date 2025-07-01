@@ -50,22 +50,44 @@ A production-grade, end-to-end Retrieval-Augmented Generation (RAG) chatbot engi
   Pass secrets and endpoints via environment variables (`ASTRADB_ENDPOINT`, `ASTRADB_TOKEN`, `MONGODB_URI`, `GROQ_API_KEY`, `GOOGLE_API_KEY`, `HF_TOKEN`).
 
 ---
-
+   
 ## 🏃 Running Locally
 
-1. With full source code
-    ```
-    pip install --upgrade pip uv
-    uv venv 
-    .venv\scripts\activate
-    uv pip install -e .
-    uv run app.py
-    ```
-2. Build and tag the Docker image:  
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/hasan-raza-01/Customer-Support-System.git
+   cd Customer-Support-System
    ```
+
+2. **Set up environment variables**
+
+   ```bash
+   cp .env.example .env
+   # Edit .env with your API keys and endpoints
+   ```
+
+3. **Create Virtual environment & Install Python dependencies**
+
+   ```bash
+   pip install --upgrade pip uv
+   uv venv 
+   .venv\scripts\activate
+   uv pip install -e .
+   ```
+
+4. **Run application**
+
+   ```bash
+   uv run app.py
+   ```
+
+6. **(Alternative) Docker**
+  ***build***
+   ```bash
    docker build -t support-bot:latest .
    ```
+   ***run***
    ```
    docker run -p 8000 support-bot:latest
    ```
-
