@@ -84,11 +84,11 @@ A production-grade, end-to-end Retrieval-Augmented Generation (RAG) chatbot engi
 
 6. **(Alternative) Docker**
 
-  ***build***
+  - ***build***
    ```bash
    docker build -t support-bot:latest .
    ```
-   ***run***
+  - ***run***
    ```
    docker run -p 8000 support-bot:latest
    ```
