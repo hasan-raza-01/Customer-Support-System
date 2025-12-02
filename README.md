@@ -9,6 +9,69 @@ A production-grade, end-to-end Retrieval-Augmented Generation (RAG) chatbot engi
 
 ---
 
+## 📂 Repository Structure
+```
+.
+├── .github/
+│   └── workflows/             # CI/CD pipeline workflows
+├── config/
+│   └── config.yaml            # Project configuration: artifact paths, database settings, API keys
+├── data/                      # Raw and processed data storage
+├── notebook/                  # Jupyter notebooks for experimentation
+│   ├── EDA.ipynb              # Exploratory data analysis
+│   ├── ETL.ipynb              # ETL process experimentation
+│   ├── data_ingestion.ipynb   # Data ingestion prototyping
+│   ├── retrieval.ipynb        # Retrieval system testing
+│   └── trail.ipynb            # Experimental trials
+├── schema/                    # Data schema definitions for validation
+├── screenshots/               # Project screenshots and demo images
+├── src/
+│   └── customer_support/      # Main package source code
+│       ├── __init__.py
+│       ├── cloud/
+│       │   └── __init__.py    # Cloud storage operations (S3, GCS)
+│       ├── components/        # Core system components
+│       │   ├── __init__.py
+│       │   ├── data_ingestion.py    # Fetches and processes customer support data
+│       │   └── data_retrieval.py    # Retrieval system for finding relevant responses
+│       ├── configuration/
+│       │   └── __init__.py    # Configuration manager: reads config.yaml, creates entity objects
+│       ├── constants/
+│       │   └── __init__.py    # Project constants: environment variables, file paths, API endpoints
+│       ├── entity/
+│       │   └── __init__.py    # Dataclass entities: artifact and configuration objects
+│       ├── exception/
+│       │   └── __init__.py    # Custom exception handling with detailed error messages
+│       ├── logger/
+│       │   └── __init__.py    # Structured logging setup with timestamps
+│       ├── pipeline/          # Orchestration layer for data and retrieval pipelines
+│       │   ├── __init__.py
+│       │   ├── data_ingestion_pipeline/
+│       │   │   └── __init__.py    # Data ingestion pipeline orchestrator
+│       │   └── retrieval_pipeline/
+│       │       └── __init__.py    # Retrieval pipeline: processes queries and returns relevant answers
+│       └── utils/
+│           └── __init__.py    # Utility functions: YAML/JSON I/O, embeddings, vector operations
+├── static/
+│   └── style.css              # CSS styling for web interface
+├── templates/
+│   └── chat.html              # Chat interface for customer support interactions
+├── .gitignore                 # Git exclusions: virtual environments, secrets, artifacts
+├── .python-version            # Python version specification for environment consistency
+├── Dockerfile                 # Container image for production deployment
+├── ETL.py                     # ETL script: extracts, transforms, loads customer support data
+├── ProjectConfig.json         # Project metadata and configuration settings
+├── app.py                     # Flask/FastAPI application: chat endpoint for customer queries
+├── hello.py                   # Hello world test script
+├── main.py                    # Main orchestrator: runs data ingestion and retrieval pipelines
+├── requirements.txt           # Python dependencies: transformers, langchain, chromadb, Flask
+├── setup.py                   # Package installer: configures package for pip installation
+└── uv.lock                    # UV package manager lock file for dependency version locking
+
+```
+
+---
+
 ## 🔧 Core Workflow
 
 1. **Review Extraction**  
